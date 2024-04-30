@@ -221,5 +221,11 @@ class KategoriController extends Controller
         // $data = array("data" => $rsetKategori);
         return response()->json($data);
     }
-    
+
+    function getAPIKategorisatu($id) {
+        $rsetKategori = Kategori::find($id);
+        $data = array("data"=>$rsetKategori);
+        // $data = array("data" => $rsetKategori);
+        return response()->json($data);
+    }
 }
